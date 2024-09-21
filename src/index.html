@@ -918,15 +918,76 @@
 							<div data-watch-threshold="0.4" data-watch data-watch-once class="register__image">
 								<img src="@img/register/01.svg" alt="Image" />
 							</div>
-							<form action="#" id="form" class="register__form form">
-								<div class="form__result-message hidden"></div>
+							<form novalidate action="#" data-ajax="telegram" class="register__form form">
+								<div class="form-message-wrapper">
+									<span></span>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+										preserveAspectRatio="xMidYMid" style="shape-rendering: auto;  background: none;"
+										xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g>
+											<g>
+												<circle fill="#01cd74" r="4" cy="50" cx="60">
+													<animate begin="-0.67s" keyTimes="0;1" values="95;35" dur="1s"
+														repeatCount="indefinite" attributeName="cx"></animate>
+													<animate begin="-0.67s" keyTimes="0;0.2;1" values="0;1;1" dur="1s"
+														repeatCount="indefinite" attributeName="fill-opacity"></animate>
+												</circle>
+												<circle fill="#01cd74" r="4" cy="50" cx="60">
+													<animate begin="-0.33s" keyTimes="0;1" values="95;35" dur="1s"
+														repeatCount="indefinite" attributeName="cx"></animate>
+													<animate begin="-0.33s" keyTimes="0;0.2;1" values="0;1;1" dur="1s"
+														repeatCount="indefinite" attributeName="fill-opacity"></animate>
+												</circle>
+												<circle fill="#01cd74" r="4" cy="50" cx="60">
+													<animate begin="0s" keyTimes="0;1" values="95;35" dur="1s"
+														repeatCount="indefinite" attributeName="cx"></animate>
+													<animate begin="0s" keyTimes="0;0.2;1" values="0;1;1" dur="1s"
+														repeatCount="indefinite" attributeName="fill-opacity"></animate>
+												</circle>
+											</g>
+											<g transform="translate(-15 0)">
+												<path transform="rotate(90 50 50)" fill="#ff4e00"
+													d="M50 50L20 50A30 30 0 0 0 80 50Z"></path>
+												<path fill="#ff4e00" d="M50 50L20 50A30 30 0 0 0 80 50Z">
+													<animateTransform keyTimes="0;0.5;1"
+														values="0 50 50;45 50 50;0 50 50" dur="1s"
+														repeatCount="indefinite" type="rotate"
+														attributeName="transform"></animateTransform>
+												</path>
+												<path fill="#ff4e00" d="M50 50L20 50A30 30 0 0 1 80 50Z">
+													<animateTransform keyTimes="0;0.5;1"
+														values="0 50 50;-45 50 50;0 50 50" dur="1s"
+														repeatCount="indefinite" type="rotate"
+														attributeName="transform"></animateTransform>
+												</path>
+											</g>
+											<g></g>
+										</g>
+									</svg>
+								</div>
 								<div class="form__row">
-									<input required type="text" class="form__input _req" id="name" name="userName"
+									<input type="text" class="form__input input " data-required data-validate
+										data-error="Please enter your name." name="Username"
 										placeholder="Your full name" />
 								</div>
 								<div class="form__row">
-									<input required type="email" class="form__input _req _email" id="email"
-										name="userEmail" placeholder="Your email" />
+									<input data-error="Invalid email. Example: name@example.com" data-required="email"
+										type="email" class="form__input input " data-validate name="User Email"
+										placeholder="Your email" />
+								</div>
+								<div class="form__row">
+									<input data-required type="tel" class="form__input input " data-validate
+										name="User Phone number" placeholder="Your phone number" />
+								</div>
+
+								<div class="form__row">
+									<label class="form__file-label" for="inpFile">
+										<span>Choose File</span>
+										<img src="@img/register/choose.png" alt="Image">
+									</label>
+									<input id="inpFile" data-max-size="50" type="file" data-required data-validate
+										class="form__input input input--file" multiple name="File"
+										placeholder="Choose File" />
 								</div>
 								<div class="form__row">
 									<button class="form__button" type="submit">

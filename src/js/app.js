@@ -110,15 +110,29 @@ import * as flsForms from './files/forms/forms.js'
 
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
-	autoHeight: false
-});
-*/
+	autoHeight: false,
+	// inputFileValidateProps: {
+	// Максимальний розмір файлу для відправки через API в телеграм
+	// maxSize: 50,
+	// allowedTypes: ['image/jpeg', 'image/png'],
+	// },
+})
+
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+
+flsForms.formSubmit({
+	TOKEN: '7488613617:AAElV80Ia6_GKMlnmp8Ue3t16zYS9eDY7lc',
+	CHAT_ID: '-1002480210292',
+	// inputFileValidateProps: {
+	// Максимальний розмір файлу для відправки через API в телеграм
+	// maxSize: 50,
+	// allowedTypes: ['image/jpeg', 'image/png'],
+	// },
+})
 
 /* Модуль форми "кількість" */
 // flsForms.formQuantity();

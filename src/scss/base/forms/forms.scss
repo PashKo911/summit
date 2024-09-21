@@ -2,6 +2,8 @@
 // Сніппет (HTML):
 .form {
 	&__row {
+		position: relative;
+		z-index: 3;
 	}
 	&__column {
 	}
@@ -12,6 +14,12 @@
 	&__button {
 	}
 	&__error {
+		color: red;
+		font-size: toRem(12);
+		position: absolute;
+		bottom: 0;
+		left: 5%;
+		transform: translate(0, 105%);
 	}
 }
 //</FORM>
@@ -22,7 +30,7 @@
 
 // <INPUTS>
 // Сніппет (HTML): inp
-// @import "input";
+@import 'input';
 
 // <CHECK>
 // Сніппет (HTML): chk
