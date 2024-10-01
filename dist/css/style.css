@@ -1786,7 +1786,7 @@ input[type=file i]::-webkit-file-upload-button+span {
   -webkit-transform: translate(0,-95%);
   transform: translate(0,-95%);
   z-index: 1;
-  background: url(../img/attend/title-dec.png) center/cover no-repeat
+  background: url(../img/attend/title-dec.webp) center/cover no-repeat
 }
 .bottom-attend__header::before {
   left: 12%
@@ -1807,7 +1807,7 @@ input[type=file i]::-webkit-file-upload-button+span {
   border-radius: .625rem;
   border: var(--border);
   background: #fff;
-  background: url(../img/attend/title-in-bg.png) center/cover no-repeat;
+  background: url(../img/attend/title-in-bg.webp) center/cover no-repeat;
   padding: 1.8125rem 2.375rem
 }
 .bottom-attend__content {
